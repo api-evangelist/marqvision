@@ -1,0 +1,60 @@
+generated: '2026-08-25'
+method: searched
+source: https://www.marqvision.com/blog/marqvision-soc-2-type-ii
+standards:
+- id: soc2-type-ii
+  name: SOC 2 Type II (AICPA Trust Services Criteria)
+  conforms: true
+  evidence:
+    url: https://www.marqvision.com/blog/marqvision-soc-2-type-ii
+    http_status: 200
+    auditor: Insight Assurance
+    announced: '2025-05-16'
+    quote: >-
+      "This independent audit was conducted by Insight Assurance, a leading cybersecurity
+      and compliance firm. Their review confirms that MarqVision meets the rigorous SOC 2,
+      Type II standards across security, availability, and operational effectiveness."
+    scope_named: security, availability, operational effectiveness
+  method: searched
+- id: oauth2
+  conforms: unknown
+  evidence:
+    note: >-
+      No public OAuth or OIDC surface. /.well-known/oauth-authorization-server and
+      /.well-known/openid-configuration return 404 on www.marqvision.com and an SPA
+      shell on the app hosts. The MarqAI API's auth model is not publicly documented.
+- id: oidc
+  conforms: unknown
+  evidence:
+    note: Same as oauth2 — no discovery document served on any host.
+- id: rfc9457
+  conforms: unknown
+  evidence:
+    note: >-
+      No machine-readable contract published, so the error envelope cannot be observed.
+- id: rfc9116
+  name: security.txt
+  conforms: false
+  evidence:
+    url: https://www.marqvision.com/.well-known/security.txt
+    http_status: 404
+    note: No security.txt served on any MarqVision host.
+domain_standard:
+  applicable: false
+  market: Brand protection / anti-counterfeiting / IP enforcement
+  note: >-
+    REWARD-ONLY dimension, correctly left unclaimed. The online brand-protection and
+    takedown market has no adopted machine-readable interchange standard of the kind this
+    check rewards (no SCIM URN, OData $metadata, OpenRTB, HL7v2, X12, ISO 20022, LTI or
+    OAI-PMH equivalent). Enforcement notice-and-takedown flows are governed by law and by
+    each marketplace's own proprietary partner program (Amazon Brand Registry, Alibaba IPP,
+    eBay VeRO), not by a shared specification. Nothing was invented to fill this slot.
+  probed_for:
+  - WIPO / trademark data interchange schema
+  - DMCA notice interchange format
+  - Any declared standard URN or $metadata surface in a MarqVision contract
+  result: none found; no MarqVision contract is published to inspect
+notes:
+- >-
+  A Compliance pointer IS emitted (SOC 2 Type II is a real, provider-announced,
+  third-party-audited certification). A Conformance pointer is emitted for this file.

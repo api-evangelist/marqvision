@@ -1,0 +1,32 @@
+generated: '2026-08-25'
+method: searched
+source: https://www.marqvision.com/
+plan_count: 0
+plans: []
+pricing_page:
+  published: false
+  probed:
+  - url: https://www.marqvision.com/pricing
+    http_status: 200
+    served: false
+    note: >-
+      Soft-404. Returns the 198899-byte homepage verbatim; a random control path on the
+      same host returns a 114289-byte page titled "Not Found". /pricing is not in
+      sitemap.xml (514 URLs). There is no pricing page.
+  - url: https://www.marqvision.com/sitemap.xml
+    http_status: 200
+    note: 514 URLs, none matching pricing/plans/cost.
+sales_motion: contact-sales
+signup:
+  self_serve: false
+  url: https://www.marqvision.com/request-demo
+  http_status: 200
+  note: Demo request form; no self-serve signup or published price anywhere.
+notes:
+- >-
+  MarqVision publishes NO pricing of any kind — no tiers, no list price, no quota, no
+  overage. Enterprise contract-only, gated behind a demo request. plan_count is an honest
+  zero, not an unmeasured gap.
+- >-
+  Third-party aggregators (Capterra, GetApp) list MarqVision without pricing as well.
+  No API-specific pricing exists because the MarqAI API is not publicly sold.

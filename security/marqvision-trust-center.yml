@@ -1,0 +1,40 @@
+generated: '2026-08-25'
+method: searched
+source: https://app.vanta.com/marqvision/trust/epgpmrjuuy9q9tkqn5m8um
+trust_center:
+  present: true
+  url: https://app.vanta.com/marqvision/trust/epgpmrjuuy9q9tkqn5m8um
+  platform: Vanta
+  hosted_by_provider: false
+  note: >-
+    MarqVision does not serve a trust center from its own domain (trust.marqvision.com
+    does not resolve). It links a Vanta-hosted trust center from the footer of
+    https://www.marqvision.com/. The Vanta page is a JavaScript-rendered single-page
+    app, so the certification inventory could not be read from the HTML; the
+    certification recorded below comes from MarqVision's own announcement post, not
+    from scraping the Vanta page.
+  x-evidence:
+    fetched: '2026-08-25'
+    url: https://app.vanta.com/marqvision/trust/epgpmrjuuy9q9tkqn5m8um
+    http_status: 200
+    content_type: text/html
+    machine_readable: false
+certifications:
+- name: SOC 2 Type II
+  status: certified
+  auditor: Insight Assurance
+  source: https://www.marqvision.com/blog/marqvision-soc-2-type-ii
+  method: searched
+  note: >-
+    Announced by MarqVision on its own blog. Audited against the AICPA Trust Services
+    Criteria. Report itself is not public; access is via the Vanta trust center, which
+    requires a request/NDA flow.
+frameworks_not_evidenced:
+- ISO 27001
+- PCI DSS
+- HIPAA
+- FedRAMP
+notes:
+- >-
+  No ISO 27001, PCI DSS, HIPAA or FedRAMP claim was found on any MarqVision-controlled
+  surface. Absence recorded as a measurement, not asserted as a negative.

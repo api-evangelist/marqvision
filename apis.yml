@@ -1,16 +1,34 @@
 aid: marqvision
 name: MarqVision
-description: 'MarqVision is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'MarqVision is a brand-integrity and intellectual-property protection platform
+  (Y Combinator S21) that uses AI-powered image recognition and semantic analysis to detect
+  and remove counterfeits, unauthorized sellers, brand impersonation and pirated content
+  across more than 1,500 online marketplaces, e-commerce sites, social platforms and app
+  stores. The product line spans MarqCommerce (marketplace enforcement), MarqContents
+  (content and piracy protection), MarqFolio (trademark portfolio management), MarqLaw
+  (legal services) and a Brand Intelligence Agent for natural-language brand-threat
+  analytics. MarqVision operates a customer-facing "MarqAI API" — named as a component on
+  its own public status page and described in its engineering blog as the "Action-Enabled
+  API" behind the Marq AI Slack app — but publishes no public developer portal, API
+  reference or machine-readable contract; programmatic access is arranged through a
+  customer success manager or the demo waitlist.'
 url: https://raw.githubusercontent.com/api-evangelist/marqvision/refs/heads/main/apis.yml
+image: https://cdn.prod.website-files.com/5e51f2cd33d368869635e146/68c77f858e19fe35fee2eb73_favicon_gradient.png
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-25'
 modified: '2026-08-25'
 tags:
+- Brand Protection
+- Intellectual Property
+- Anti-Counterfeiting
+- Trademarks
+- Content Protection
+- E-Commerce
+- Artificial Intelligence
+- Trust and Safety
+- Enforcement
 - Company
 apis: []
 maintainers:
@@ -19,5 +37,61 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/marqvision-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/marqvision_stock/
+  url: https://www.marqvision.com/
+- type: Blog
+  url: https://www.marqvision.com/blog
+- type: SignUp
+  url: https://brand.marqvision.com/login
+- type: GitHubOrganization
+  url: https://github.com/marqvision
+- type: TermsOfService
+  url: https://www.marqvision.com/marqcommerce-tc
+- type: PrivacyPolicy
+  url: https://www.marqvision.com/privacy-policy
+- type: StatusPage
+  url: https://status.marqvision.com/
+- type: TrustCenter
+  url: https://app.vanta.com/marqvision/trust/epgpmrjuuy9q9tkqn5m8um
+- type: Compliance
+  url: https://www.marqvision.com/blog/marqvision-soc-2-type-ii
+- type: Lifecycle
+  url: lifecycle/marqvision-lifecycle.yml
+- type: Conformance
+  url: conformance/marqvision-conformance.yml
+- type: WellKnownProbe
+  url: well-known/marqvision-well-known.yml
+- type: Packages
+  url: packages/marqvision-packages.yml
+- type: Plans
+  url: plans/marqvision-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/marqvision-rate-limits.yml
+- type: LLMsTxt
+  url: llms/marqvision-llms.txt
+x-enrichment:
+  date: '2026-08-25'
+  status: minimal
+  artifacts_added: 9
+  pass: local-v1
+x-coverage:
+  state: gated
+  reason: customer-only-docs
+  detail: >-
+    MarqVision runs a real API — its own status page monitors a component named "MarqAI
+    API" and its blog calls the Marq AI Slack app "the first product built on our
+    Action-Enabled API" — but ships zero public developer surface: docs.marqvision.com and
+    developer.marqvision.com do not resolve, api.marqvision.com 404s on every probed path,
+    and access is routed through a customer success manager or the demo waitlist.
+  evidence:
+  - url: https://status.marqvision.com/api/v2/components.json
+    status: 200
+  - url: https://api.marqvision.com/openapi.json
+    status: 404
+  - url: https://www.marqvision.com/llms.txt
+    status: 404
+  - url: https://brand.marqvision.com/openapi.json
+    status: 200
+  checked: '2026-08-25'

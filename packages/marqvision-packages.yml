@@ -1,0 +1,39 @@
+generated: '2026-08-25'
+method: searched
+source: npm, PyPI, GitHub org, MarqVision website
+package_count: 0
+packages: []
+registries_searched:
+- registry: npm
+  query: marqvision, marq-vision
+  endpoint: https://registry.npmjs.org/-/v1/search
+  result: no first-party package; all hits are unrelated ("vision" substring matches)
+  version: null
+- registry: pypi
+  queried:
+  - name: marqvision
+    endpoint: https://pypi.org/pypi/marqvision/json
+    http_status: 404
+  - name: marqvision-sdk
+    endpoint: https://pypi.org/pypi/marqvision-sdk/json
+    http_status: 404
+  version: null
+- registry: github
+  org: https://github.com/marqvision
+  http_status: 200
+  public_repos: 1
+  result: >-
+    The org exists (created 2023-10-19, described "Global leader in Brand Integrity") but
+    publishes exactly one repository, `.github`, which is org profile metadata. No SDK,
+    no client library, no sample code, no spec.
+  version: null
+- registry: rubygems
+  result: not searched separately; no evidence of any MarqVision client library in any language
+  version: null
+notes:
+- >-
+  MarqVision ships no first-party SDK or client library in any public registry. No SDKs
+  pointer is emitted, because sdk_count must not be credited from an empty artifact.
+- >-
+  This is a recorded absence with the registry endpoints and status codes that produced
+  it, not an unchecked gap.

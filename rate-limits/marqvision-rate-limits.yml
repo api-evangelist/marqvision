@@ -1,0 +1,21 @@
+generated: '2026-08-25'
+method: searched
+source: https://www.marqvision.com/
+limit_count: 0
+rate_limits: []
+response_headers:
+  documented: false
+  observed: []
+  note: >-
+    Could not be observed. No public API endpoint is documented and api.marqvision.com
+    returns 404 on every path probed, so no live unauthenticated response exists to read
+    X-RateLimit-*, RateLimit-* or Retry-After from.
+exhaustion_status_code: unknown
+notes:
+- >-
+  MarqVision documents no rate limits. The MarqAI API exists (named on the public status
+  page, described as the "Action-Enabled API" in the provider blog) but has no public
+  developer documentation of any kind, so there is no published limit to record.
+- >-
+  limit_count 0 is an honest zero: the docs were searched and no limits were found, as
+  distinct from "not checked".

@@ -1,0 +1,91 @@
+generated: '2026-08-25'
+method: probed
+source: live probes of every MarqVision host
+hit_count: 0
+hosts:
+- host: https://www.marqvision.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://brand.marqvision.com
+  soft_404_control:
+    path: /zzz-soft404-control-32294
+    status: 200
+    bytes: 5360
+    note: >-
+      Catch-all single-page app. Every /.well-known/* path returns HTTP 200 with the
+      identical 5360-byte HTML application shell, byte-for-byte equal to a random
+      control path. No document is served.
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    served: false
+    note: SPA shell, 5360 bytes, identical to soft-404 control. Not a document.
+  - path: /.well-known/agent-card.json
+    status: 200
+    served: false
+    note: SPA shell, 5360 bytes, identical to soft-404 control. Not a document.
+  - path: /.well-known/openid-configuration
+    status: 200
+    served: false
+    note: SPA shell, 5360 bytes, identical to soft-404 control. Not a document.
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    served: false
+    note: SPA shell, 5360 bytes, identical to soft-404 control. Not a document.
+  - path: /.well-known/api-catalog
+    status: 200
+    served: false
+    note: SPA shell, 5360 bytes, identical to soft-404 control. Not a document.
+- host: https://folio.marqvision.com
+  soft_404_control:
+    path: /zzz-soft404-control-29953
+    status: 200
+    bytes: 10494
+    note: >-
+      Catch-all single-page app. Every /.well-known/* path returns HTTP 200 with the
+      identical 10494-byte HTML application shell, byte-for-byte equal to a random
+      control path. No document is served.
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    served: false
+    note: SPA shell, 10494 bytes, identical to soft-404 control. Not a document.
+  - path: /.well-known/agent-card.json
+    status: 200
+    served: false
+    note: SPA shell, 10494 bytes, identical to soft-404 control. Not a document.
+  - path: /.well-known/api-catalog
+    status: 200
+    served: false
+    note: SPA shell, 10494 bytes, identical to soft-404 control. Not a document.
+- host: https://api.marqvision.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+notes:
+- >-
+  No .well-known document is served on any MarqVision host. No WellKnown, SecurityTxt
+  or APICatalog pointer is emitted, and no agent card was written, because the only
+  200s observed are single-page-app catch-alls proven by a random-path control.
+- >-
+  This file is a recorded ABSENCE. It is wired into apis.yml as type WellKnownProbe
+  (deliberately not WellKnown) so it is not scored as a served surface.

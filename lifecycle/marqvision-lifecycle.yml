@@ -1,0 +1,61 @@
+generated: '2026-08-25'
+method: searched
+source: https://status.marqvision.com/
+status_page:
+  present: true
+  url: https://status.marqvision.com/
+  platform: Atlassian Statuspage
+  page_id: sd9hrtl513xk
+  machine_readable: true
+  api:
+    summary: https://status.marqvision.com/api/v2/summary.json
+    status: https://status.marqvision.com/api/v2/status.json
+    components: https://status.marqvision.com/api/v2/components.json
+    history_rss: https://status.marqvision.com/history.rss
+    history_atom: https://status.marqvision.com/history.atom
+  observed:
+    fetched: '2026-08-25'
+    http_status: 200
+    indicator: none
+    description: All Systems Operational
+    incidents: 0
+    scheduled_maintenances: 0
+  components:
+  - name: MarqAI Dashboard
+    id: 2cppwqkpzzff
+    status: operational
+    created_at: '2026-08-05'
+  - name: MarqAI API
+    id: zzq1xw99l5vn
+    status: operational
+    created_at: '2026-08-05'
+  note: >-
+    The status page is the strongest public evidence that MarqVision runs a
+    customer-facing API: it lists "MarqAI API" as a first-class monitored component
+    alongside the dashboard. Both components were created 2026-08-05, which dates the
+    public status surface rather than the API itself.
+versioning:
+  policy_published: false
+  scheme: unknown
+  note: >-
+    No public versioning policy, version scheme, or API changelog was found on any
+    MarqVision surface. There is no developer portal to publish one on.
+deprecation:
+  policy_published: false
+  sunset_header: unknown
+  rfc8594: unknown
+  note: >-
+    No deprecation policy and no evidence of RFC 8594 Sunset/Deprecation headers. Could
+    not be observed because no public API endpoint or reference is documented.
+sla:
+  published: false
+  note: >-
+    No public SLA. Terms are per-contract; the MarqCommerce and MarqContents terms pages
+    (https://www.marqvision.com/marqcommerce-tc, https://www.marqvision.com/marqcontents-tc)
+    are the only public commercial terms.
+deprecated_operations: []
+notes:
+- >-
+  No Deprecation pointer is emitted in apis.yml because no deprecation policy exists to
+  point at. A StatusPage pointer IS emitted — the status page is real, live and
+  machine-readable.
