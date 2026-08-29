@@ -13,6 +13,17 @@ description: 'MarqVision is a brand-integrity and intellectual-property protecti
   reference or machine-readable contract; programmatic access is arranged through a
   customer success manager or the demo waitlist.'
 url: https://raw.githubusercontent.com/api-evangelist/marqvision/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://cdn.prod.website-files.com/5e51f2cd33d368869635e146/68c77f858e19fe35fee2eb73_favicon_gradient.png
 x-type: company
 x-source: harvest:secondary-market
